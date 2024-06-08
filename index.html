@@ -174,7 +174,6 @@
             <th style="width: 15%">Familiyasi, ismi va otasining ismi</th>
             <th style="width: 20%">Tug'ilgan joyi va lavozimi</th>
             <th style="width: 25%">Ish joyi va lavozimi</th>
-            <th style="width: 25%">Turar joyi</th>
           </tr>
         </thead>
         <!-- <tbody>
@@ -235,10 +234,12 @@
         <h3 class="modal-title">Malumotlaringizni kriting</h3>
       </div>
       <form class="modal-body">
+        <!-- Start of First modal row -->
         <div class="row">
           <div class="cal-2">
             <label for="full__name_input">To'liq ismingiz:</label>
             <input
+              required
               type="text"
               id="full__name_input"
               name="full__name"
@@ -247,10 +248,11 @@
             <span class="note error"></span>
           </div>
           <div class="cal-1">
-            <label for="birth__date_input"
-              >Tug'ulgan sanangiz (01.01.2001):</label
-            >
+            <label for="birth__date_input">
+              Tug'ulgan sanangiz (01.01.2001):
+            </label>
             <input
+              required
               type="text"
               name="birth__date"
               id="birth__date_input"
@@ -259,13 +261,14 @@
             <span class="note error"></span>
           </div>
         </div>
+        <!-- End of First modal row -->
 
+        <!-- Start of Second modal row -->
         <div class="row">
           <div class="cal-1">
-            <label for="nationality_input"
-              >Tug'ulgan Tumaningiz (O'zbek):</label
-            >
+            <label for="nationality_input">Millatingiz (O'zbek):</label>
             <input
+              required
               type="text"
               name="nationality"
               id="nationality_input"
@@ -278,6 +281,7 @@
               >Tug'ulgan Tumaningiz (Dehoqonobod tumani):</label
             >
             <input
+              required
               type="text"
               name="birth__district"
               id="birth__district_input"
@@ -290,6 +294,7 @@
               >Tug'ulgan Viloyatingiz (Qashqadaryo viloyati):</label
             >
             <input
+              required
               type="text"
               name="birth__region"
               id="birth__region_input"
@@ -298,11 +303,80 @@
             <span class="note error"></span>
           </div>
         </div>
+        <!-- Start of Second modal row -->
+        <h3 class="modal-subTitle">
+          Yaqin qarindoshlaringiz malumotlarini kriting
+        </h3>
 
+        <!-- You can add new row about relatives info -->
+        <div class="add__relatives__info">
+          <!-- Start of Third modal row -->
+          <div class="row relative_row">
+            <div class="cal-1">
+              <label for="relative_type_input_1">Qarindoshlik shakli</label>
+              <select name="relativeType" required id="relative_type_input_1">
+                <option value="" disabled selected>Qarindoshingiz</option>
+                <option value="otasi">Otasi</option>
+                <option value="onasi">Onasi</option>
+                <option value="akasi">Akasi</option>
+                <option value="ukasi">Ukasi</option>
+                <option value="opasi">Opasi</option>
+                <option value="singlisi">Singlisi</option>
+              </select>
+              <span class="note error"></span>
+            </div>
+            <div class="cal-3">
+              <label for="relative_full_name_input_1">
+                Qarindoshining to'liq ismi (F.I.SH)
+              </label>
+              <input
+                required
+                type="text"
+                name="relativeFullName"
+                id="relative_full_name_input_1"
+                placeholder="To'liq ismini kriting (F.I.SH)"
+              />
+              <span class="note error"></span>
+            </div>
+            <div class="cal-2">
+              <label for="relative_birth__region_input_1">
+                Tug'ulgan Manzili (Viloyat va tuman):
+              </label>
+              <input
+                required
+                type="text"
+                name="relativeBirthRegion"
+                id="relative_birth__region_input_1"
+                placeholder="Qashqadaryo viloyati, Dehqonobod Tumani"
+              />
+              <span class="note error"></span>
+            </div>
+            <div class="cal-1">
+              <label for="relative_profession_input_1">
+                Kasbi (VInjiner):
+              </label>
+              <input
+                required
+                type="text"
+                name="relativeProfession"
+                id="relative_profession_input_1"
+                placeholder="Injiner"
+              />
+              <span class="note error"></span>
+            </div>
+          </div>
+          <!-- Start of Third modal row -->
+        </div>
+        <div class="add_line_wrapper">
+          <button class="addInfoRow" id="addInfoRow">+</button>
+          <dir class="line"></dir>
+        </div>
         <button id="save">Save</button>
       </form>
     </div>
     <div class="overLine"></div>
-    <script src="./mian.js"></script>
+
+    <script src="./js/mian.js"></script>
+    <script src="./js/addRelativeRow.js"></script>
   </body>
 </html>

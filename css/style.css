@@ -68,8 +68,9 @@ td {
 /* modal */
 #modal {
   display: block;
-  width: 80%;
-  height: 80%;
+  max-width: 1100px;
+  width: 90%;
+  height: 85%;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -80,6 +81,7 @@ td {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.04);
   opacity: 1;
   z-index: 1;
+  overflow-y: auto;
 }
 .overLine {
   position: fixed;
@@ -100,9 +102,18 @@ td {
   margin-bottom: 20px;
   text-align: center;
 }
+.modal-subTitle {
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+#modal .row.relative_row {
+  margin-bottom: 20px;
+}
 #modal .row {
   margin-bottom: 40px;
   display: flex;
+  justify-content: center;
   gap: 15px;
 }
 .row .cal-1 {
@@ -111,10 +122,13 @@ td {
 .row .cal-2 {
   flex: 2;
 }
+.row .cal-3 {
+  flex: 3;
+}
 .row > * {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   position: relative;
 }
 
@@ -123,7 +137,8 @@ label {
   margin-bottom: 3px;
   font-size: 16px;
 }
-input[type="text"] {
+input[type="text"],
+select {
   width: 100%;
   height: 40px;
   padding: 10px;
@@ -179,6 +194,47 @@ button:hover {
 .close-btn:hover {
   background: #c95757;
   color: #fff;
+}
+
+.add__relatives__info {
+  height: 200px;
+  overflow-y: scroll;
+}
+.add_line_wrapper {
+  text-align: center;
+  position: relative;
+}
+.addInfoRow {
+  z-index: 5;
+  position: relative;
+  background-color: #fff;
+  border: 3px solid #eef0f5;
+  border-radius: 50%;
+  font-size: 23px;
+  color: #0056b3;
+
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  transition: all 0.3s;
+}
+.addInfoRow + .line {
+  width: 100%;
+  border: 2px solid #eef0f5;
+  position: absolute;
+  top: 7px;
+  z-index: 4;
+  transition: all 0.4s;
+}
+.addInfoRow:hover {
+  transform: scale(1.15);
+  background-color: #fff;
+  border-color: #0056b3;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.addInfoRow:hover + .line {
+  box-shadow: 0px 3px 7px rgba(16, 22, 83, 0.6);
+  border-color: #0056b3;
 }
 
 @media (max-width: 910px) {
