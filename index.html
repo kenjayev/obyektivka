@@ -160,9 +160,11 @@
         </div>
       </section>
     </div>
+    <!-- First list and -->
 
+    <!-- Second list started -->
     <div class="container">
-      <h1 class="title center">
+      <h1 class="title center secondList">
         Kenjayev Azizbek Nomoz o'g'lining yaqin qarindoshlari <br />
         MA'LUMOT
       </h1>
@@ -176,55 +178,7 @@
             <th style="width: 25%">Ish joyi va lavozimi</th>
           </tr>
         </thead>
-        <!-- <tbody>
-          <tr>
-            <th style="width: 15%">Otasi</th>
-            <td style="width: 15%">Xolto'rayev Nomoz Kenjayevich</td>
-            <td style="width: 20%">
-              1961-yil Qashqadaryo viloyati, Dehqonobod tumani
-            </td>
-            <td style="width: 25%">Pensiyada</td>
-            <td style="width: 25%">
-              Qashqadaryo viloyati, Dehqonobod tumani Kimyogar kochasi 47-uy
-            </td>
-          </tr>
-
-          <tr>
-            <th style="width: 15%">Onasi</th>
-            <td style="width: 15%">Shunqorova Oysoat Yodgorovna</td>
-            <td style="width: 20%">
-              1965-yil Qashqadaryo viloyati, Dehqonobod tumani
-            </td>
-            <td style="width: 25%">Pensiyada</td>
-            <td style="width: 25%">
-              Qashqadaryo viloyati, Dehqonobod tumani Kimyogar kochasi 47-uy
-            </td>
-          </tr>
-
-          <tr>
-            <th style="width: 15%">Akasi</th>
-            <td style="width: 15%">Xolto'rayev Otabek Nomozovich</td>
-            <td style="width: 20%">
-              1988-yil Qashqadaryo viloyati, Dehqonobod tumani
-            </td>
-            <td style="width: 25%">
-              KOC construction (Texnika xavfsizligi muhandisi)
-            </td>
-            <td style="width: 25%">
-              Qashqadaryo viloyati, Dehqonobod tumani Kimyogar kochasi 47-uy
-            </td>
-          </tr>
-
-          <tr>
-            <th style="width: 15%">Opasi</th>
-            <td style="width: 15%">Kenjayeva Maftina Nomozovna</td>
-            <td style="width: 20%">
-              1992-yil Qashqadaryo viloyati, Dehqonobod tumani
-            </td>
-            <td style="width: 25%">O'qituvchi</td>
-            <td style="width: 25%">Qashqadaryo viloyati, Dehqonobod tumani</td>
-          </tr>
-        </tbody> -->
+        <!-- <tbody></tbody> -->
       </table>
     </div>
 
@@ -236,7 +190,18 @@
       <form class="modal-body">
         <!-- Start of First modal row -->
         <div class="row">
-          <div class="cal-2">
+          <div class="cal-1">
+            <label for="img_src_input">Rasmni tanlang:</label>
+            <input
+              required
+              type="file"
+              name="user_img"
+              id="img_src_input"
+              accept="image/png, image/jpeg"
+            />
+            <span class="note error"></span>
+          </div>
+          <div class="cal-3">
             <label for="full__name_input">To'liq ismingiz:</label>
             <input
               required
@@ -247,7 +212,7 @@
             />
             <span class="note error"></span>
           </div>
-          <div class="cal-1">
+          <div class="cal-2">
             <label for="birth__date_input">
               Tug'ulgan sanangiz (01.01.2001):
             </label>
@@ -276,19 +241,7 @@
             />
             <span class="note error"></span>
           </div>
-          <div class="cal-1">
-            <label for="birth__district_input"
-              >Tug'ulgan Tumaningiz (Dehoqonobod tumani):</label
-            >
-            <input
-              required
-              type="text"
-              name="birth__district"
-              id="birth__district_input"
-              placeholder="'nom' tumani"
-            />
-            <span class="note error"></span>
-          </div>
+
           <div class="cal-1">
             <label for="birth__region_input"
               >Tug'ulgan Viloyatingiz (Qashqadaryo viloyati):</label
@@ -302,8 +255,22 @@
             />
             <span class="note error"></span>
           </div>
+          <div class="cal-1">
+            <label for="birth__district_input"
+              >Tug'ulgan Tumaningiz (Dehoqonobod tumani):</label
+            >
+            <input
+              required
+              type="text"
+              name="birth__district"
+              id="birth__district_input"
+              placeholder="'nom' tumani"
+            />
+            <span class="note error"></span>
+          </div>
         </div>
         <!-- Start of Second modal row -->
+
         <h3 class="modal-subTitle">
           Yaqin qarindoshlaringiz malumotlarini kriting
         </h3>
@@ -371,12 +338,16 @@
           <button class="addInfoRow" id="addInfoRow">+</button>
           <dir class="line"></dir>
         </div>
-        <button id="save">Save</button>
+        <button type="submit" id="save">Save</button>
       </form>
     </div>
     <div class="overLine"></div>
 
     <script src="./js/mian.js"></script>
     <script src="./js/addRelativeRow.js"></script>
+    <script src="./js/getUserArr.js"></script>
+    <script src="./js/drawUserData.js"></script>
+    <script src="./js/checkEmptyInput.js"></script>
+    <script src="./js/closeModal.js"></script>
   </body>
 </html>
