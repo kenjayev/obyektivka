@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>obyektivka</title>
+    <link rel="stylesheet" href="./css/successModal.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <div class="header">
+      <select name="savedUsers" id="savedUsers">
+        <option disabled selected>Saqlangan insonlar</option>
+      </select>
+      <button id="openModal">Odam qo'shish</button>
+    </div>
     <div class="container">
       <h1 class="title center">MA'LUMOTNOMA</h1>
       <section class="about-person">
@@ -182,6 +189,7 @@
       </table>
     </div>
 
+    <!-- Start sign up modal -->
     <div id="modal">
       <button id="close" class="close-btn">X</button>
       <div class="modal-header">
@@ -283,12 +291,12 @@
               <label for="relative_type_input_1">Qarindoshlik shakli</label>
               <select name="relativeType" required id="relative_type_input_1">
                 <option value="" disabled selected>Qarindoshingiz</option>
-                <option value="otasi">Otasi</option>
-                <option value="onasi">Onasi</option>
-                <option value="akasi">Akasi</option>
-                <option value="ukasi">Ukasi</option>
-                <option value="opasi">Opasi</option>
-                <option value="singlisi">Singlisi</option>
+                <option value="Otasi">Otasi</option>
+                <option value="Onasi">Onasi</option>
+                <option value="Akasi">Akasi</option>
+                <option value="Ukasi">Ukasi</option>
+                <option value="Opasi">Opasi</option>
+                <option value="Singlisi">Singlisi</option>
               </select>
               <span class="note error"></span>
             </div>
@@ -341,13 +349,27 @@
         <button type="submit" id="save">Save</button>
       </form>
     </div>
+    <!-- End of sign up modal -->
+    <!-- Start of Success sign up modal -->
+    <div class="modal_success">
+      <h3 class="modal_success__title">Muvaffqaiyatli bajarildi</h3>
+      <div class="checkmark_circle__wrapper">
+        <div class="bg_circle"></div>
+        <div class="checkmark_circle"></div>
+      </div>
+      <div class="second"></div>
+    </div>
+    <!-- Start of Success sign up modal -->
     <div class="overLine"></div>
 
     <script src="./js/mian.js"></script>
+    <script src="./js/saveUsers.js"></script>
     <script src="./js/addRelativeRow.js"></script>
     <script src="./js/getUserArr.js"></script>
     <script src="./js/drawUserData.js"></script>
     <script src="./js/checkEmptyInput.js"></script>
     <script src="./js/closeModal.js"></script>
+    <script src="./js/openModal.js"></script>
+    <script src="./js/showSuccessModal.js"></script>
   </body>
 </html>

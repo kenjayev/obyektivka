@@ -12,9 +12,14 @@ async function addUser(e) {
   user.push(userObj);
   /* drawUserData.js -> fo'rmadagi insonni chizish uchun */
   drawUserData(userObj);
+  /* Set data to Local Storage */
   setToLocalStorage("users-lens", user);
   /* closeModal.js -> formani yopish uchun funksiya */
   closeModal();
+  /* showSuccessModal.js -> when add user successful then show success modal and then close this modal */
+  showSuccessModal();
+  /* saveUsers.js -> add new option for new user. */
+  addOptionUser(userObj);
 }
 
 /* --- Set Items to Local Storage --- */

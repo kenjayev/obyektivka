@@ -7,7 +7,7 @@ document.querySelectorAll("input").forEach((inp) => {
 function checkInput(inp) {
   inp.value
     ? addRemoveErrorClass(inp)
-    : addRemoveErrorClass(inp, "add", "Qatorni bo'sh qoldirmang!!");
+    : addRemoveErrorClass(inp, "add", "Bo'sh qoldirmang!");
 }
 function addRemoveErrorClass(inp, addOrRemove = "remove", message = "") {
   inp.previousElementSibling.classList[addOrRemove]("error");

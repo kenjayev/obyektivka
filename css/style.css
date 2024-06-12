@@ -4,6 +4,11 @@
   box-sizing: border-box;
   font-size: 18px;
 }
+.header {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 .container {
   border: 1px solid black;
   max-width: 900px;
@@ -60,7 +65,7 @@ td {
 }
 th,
 td {
-  padding: 0 5px;
+  padding: 3px 5px;
   text-align: center;
   font-size: 16px;
 }
@@ -139,7 +144,6 @@ label {
 }
 input[type="text"],
 select {
-  width: 100%;
   height: 40px;
   padding: 10px;
   outline: none;

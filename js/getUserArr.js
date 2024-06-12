@@ -41,6 +41,7 @@ async function getUserArr() {
   const birthRegion = document.querySelector("#birth__region_input").value;
   const birthDistrict = document.querySelector("#birth__district_input").value;
   const nationality = document.querySelector("#nationality_input").value;
+  const id = new Date().getTime();
   let src;
   try {
     src = await getImgSrc();
@@ -48,6 +49,7 @@ async function getUserArr() {
     console.log(error);
   }
   return {
+    id,
     fullName,
     birthDate,
     birthRegion,
