@@ -9,7 +9,7 @@ function showSuccessModal() {
   successModal.classList.add("show");
   checkmark.classList.add("show");
 
-  let second = 4;
+  let second = 3;
   const interval = setInterval(() => {
     secondBox.textContent = `00:0${second}`;
     second--;
@@ -20,5 +20,5 @@ function showSuccessModal() {
     successModal.classList.add("close");
     successModal.classList.remove("show");
     checkmark.classList.remove("show");
-  }, 5000);
+  }, 4000);
 }

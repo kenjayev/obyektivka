@@ -9,12 +9,13 @@ function drawUserData(user) {
   }
   secondListTilt.innerHTML = `${user.fullName}ning yaqin qarindoshlari <br /> MA'LUMOT`;
   img_box.src = user.user_img_src;
-  table.appendChild(getTbody(user.relative));
+  getTbody(user.relative);
 }
 /* --- end of Draw html Data --- */
 
 function getTbody(arr) {
-  const tBody = document.createElement("tbody");
+  const tBody = document.querySelector("#relative_section");
+  tBody.innerHTML = "";
   arr.forEach((relative) => {
     tBody.innerHTML += tableRowHtml(relative);
   });
